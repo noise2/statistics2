@@ -93,7 +93,7 @@ module Statistics2::Base
          0.3657763036e-10, 0.6936233982e-12]
 
     if(qn < 0.0 || 1.0 < qn)
-      $stderr.printf("Error : qn <= 0 or qn >= 1  in pnorm()!\n")
+      # $stderr.printf("Error : qn <= 0 or qn >= 1  in pnorm()!\n")
       return 0.0;
     end
     qn == 0.5 and return 0.0
@@ -239,7 +239,7 @@ module Statistics2::Base
   def pt(q, n)
     q = q.to_f
     if(q < 1.0e-5 || q > 1.0 || n < 1)
-      $stderr.printf("Error : Illigal parameter in pt()!\n")
+      # $stderr.printf("Error : Illigal parameter in pt()!\n")
       return 0.0
     end
 
@@ -326,7 +326,7 @@ module Statistics2::Base
   # [x, \infty)
   def pf(q, n1, n2)
     if(q < 0.0 || q > 1.0 || n1 < 1 || n2 < 1)
-      $stderr.printf("Error : Illegal parameter in pf()!\n")
+      # $stderr.printf("Error : Illegal parameter in pf()!\n")
       return 0.0
     end
 
